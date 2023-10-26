@@ -8,8 +8,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
-	  -- or                            , branch = '0.1.x',
+	  'nvim-telescope/telescope.nvim', tag = '0.1.4',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
@@ -20,9 +19,6 @@ return require('packer').startup(function(use)
       config = function()
           require("trouble").setup {
               icons = false,
-              -- your configuration comes here
-              -- or leave it empty to use the default settings
-              -- refer to the configuration section below
           }
       end
   })
@@ -63,4 +59,6 @@ return require('packer').startup(function(use)
   use("eandrju/cellular-automaton.nvim")
   use("laytan/cloak.nvim")
   use("voldikss/vim-floaterm")
+  use('ray-x/go.nvim')
+  use('ray-x/guihua.lua')
 end)
